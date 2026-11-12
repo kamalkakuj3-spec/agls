@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>কুরআন তেলাওয়াত ও আরবি চর্চার আগ্রহ | AGLS365</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0a3b2c;--green:#12805a;--mint:#e3f3ea;--paper:#faf7ee;--white:#fff;--text:#17271f;--mute:#5c6f66;--line:#cfe3d7;--warn:#a2641a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:var(--paper);color:var(--text);font-family:'Hind Siliguri',system-ui,sans-serif;line-height:1.85;font-size:19px}
+.ar{font-family:Amiri,serif;direction:rtl}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* toolbar */
+.tool{position:sticky;top:0;z-index:10;background:rgba(250,247,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tool .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.tool b{color:var(--deep);font-size:17px}
+.pdf{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border:0;border-radius:999px;background:var(--green);color:#fff;font:inherit;font-weight:600;font-size:16px;cursor:pointer;box-shadow:0 10px 24px -10px rgba(18,128,90,.9);transition:transform .2s,background .2s}
+.pdf:hover{transform:translateY(-2px);background:var(--deep)}
+.prog{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--green)}
+
+/* cover */
+.cover{background:linear-gradient(155deg,var(--deep),#0f5c43 65%,var(--green));color:#fff;text-align:center;padding:70px 20px 80px;position:relative;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:18px;border:2px solid rgba(255,255,255,.25);border-radius:26px;pointer-events:none}
+.cover .ar{font-size:clamp(50px,11vw,96px);line-height:1.5;text-shadow:0 6px 30px rgba(0,0,0,.3)}
+.cover h1{font-size:clamp(26px,5vw,42px);line-height:1.3;margin:6px 0 10px}
+.cover p{opacity:.88;font-size:19px}
+.brand{margin-top:34px;display:inline-block;padding:8px 24px;border:1px solid rgba(255,255,255,.4);border-radius:999px;font-size:16px;letter-spacing:.04em}
+.how{margin:22px 0 0;color:var(--mute);font-size:15px;text-align:center}
+
+/* chapters */
+.ch{position:relative;margin:46px 0;padding-left:72px}
+.ch::before{content:"";position:absolute;left:25px;top:56px;bottom:-30px;width:2px;background:var(--line)}
+.ch:last-of-type::before{display:none}
+.no{position:absolute;left:0;top:0;width:52px;height:52px;border-radius:16px;transform:rotate(45deg);background:var(--green);box-shadow:0 10px 22px -10px rgba(18,128,90,.8)}
+.no span{display:grid;place-items:center;width:100%;height:100%;transform:rotate(-45deg);color:#fff;font-weight:700;font-size:23px}
+.ch h2{font-size:28px;line-height:1.35;color:var(--deep);padding-top:6px}
+.ch .sub{color:var(--mute);font-size:17px;margin-bottom:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:24px 26px;margin-top:18px;box-shadow:0 16px 36px -26px rgba(10,59,44,.55);break-inside:avoid;page-break-inside:avoid;transition:transform .25s,box-shadow .25s}
+.card:hover{box-shadow:0 26px 48px -26px rgba(18,128,90,.55)}
+.verse{font-size:clamp(30px,6vw,44px);line-height:1.9;color:var(--deep);text-align:center;padding:10px 0 14px;border-bottom:1px dashed var(--line);margin-bottom:12px}
+.verse.sm{font-size:clamp(24px,4.6vw,31px);text-align:right}
+.mean{font-size:20px}
+.mean b{color:var(--green)}
+.ref{display:inline-block;margin-top:12px;padding:3px 16px;border-radius:999px;background:var(--mint);color:var(--deep);font-size:15px;font-weight:600}
+.badge{display:inline-block;margin:12px 0 0 8px;padding:3px 14px;border-radius:999px;background:#fbefdc;color:var(--warn);font-size:15px;font-weight:600}
+.who{color:var(--green);font-weight:600;font-size:17px;margin-bottom:6px}
+ul.pts{list-style:none;margin-top:10px}
+ul.pts li{position:relative;padding-left:26px;margin:6px 0}
+ul.pts li::before{content:"";position:absolute;left:4px;top:14px;width:10px;height:10px;border-radius:2px;background:var(--green);transform:rotate(45deg)}
+.note{margin-top:18px;padding:20px 24px;border-radius:20px;background:var(--deep);color:#e8f5ee;break-inside:avoid;page-break-inside:avoid}
+.note h3{font-size:21px;margin-bottom:4px;color:#fff}
+footer{text-align:center;color:var(--mute);padding:20px 0 60px;font-size:15px}
+
+@media (max-width:600px){.ch{padding-left:0;padding-top:64px}.ch::before{display:none}.card{padding:20px 18px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+/* print = book */
+@page{size:A4;margin:16mm 15mm}
+@media print{
+  body{background:#fff;font-size:15.5pt;line-height:1.7}
+  .tool,.how,.prog{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .cover{min-height:255mm;display:flex;flex-direction:column;justify-content:center;border-radius:0;page-break-after:always;break-after:page}
+  .ch{margin:26px 0;padding-left:60px}
+  .card,.note{box-shadow:none}
+  .ch h2{break-after:avoid;page-break-after:avoid}
+  footer{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="tool">
+  <div class="wrap">
+    <b>AGLS365</b>
+    <button class="pdf" id="pdf" type="button">পিডিএফ করুন</button>
+  </div>
+  <div class="prog" id="prog"></div>
+</div>
+
+<header class="cover">
+  <div class="ar">تِلَاوَةُ الْقُرْآنِ</div>
+  <h1>কুরআন তেলাওয়াত ও আরবি চর্চার আগ্রহ</h1>
+  <p>কুরআন ও হাদিস থেকে সংক্ষিপ্ত কিছু কথা</p>
+  <div class="brand">Arabic Grammar Life Support · AGLS365</div>
+</header>
+<p class="how">“পিডিএফ করুন” চাপলে প্রিন্ট উইন্ডো খুলবে। সেখানে “Save as PDF” বেছে নিলে বইয়ের মতো পিডিএফ ডাউনলোড হবে।</p>
+
+<main class="wrap">
+
+<section class="ch">
+  <div class="no"><span>১</span></div>
+  <h2>কুরআন তেলাওয়াত কেমন হওয়া উচিত</h2>
+  <p class="sub">কুরআনের নির্দেশনা</p>
+  <div class="card tilt">
+    <div class="verse ar">وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</div>
+    <p class="mean"><b>অর্থ:</b> আর কুরআন তেলাওয়াত করো ধীরে ধীরে, স্পষ্ট ও সুন্দরভাবে।</p>
+    <span class="ref">সূরা আল-মুযযাম্মিল ৭৩:৪</span>
+  </div>
+  <div class="card tilt">
+    <p class="mean">এখানে <b class="ar" style="font-size:26px">تَرْتِيلًا</b> (তারতীলা) শব্দটি বিশেষভাবে লক্ষণীয়। এর অর্থ:</p>
+    <ul class="pts">
+      <li>ধীরস্থিরভাবে তেলাওয়াত করা।</li>
+      <li>প্রতিটি হরফ স্পষ্টভাবে উচ্চারণ করা।</li>
+      <li>হরফের যথাযথ অধিকার ও উচ্চারণের স্থান বজায় রাখা।</li>
+      <li>তাড়াহুড়ো না করে তেলাওয়াত করা।</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h3>একটি গুরুত্বপূর্ণ পার্থক্য</h3>
+    <p>কুরআন এখানে সরাসরি <span class="ar" style="font-size:22px">تَرْتِيل</span> (তারতীল) করার নির্দেশ দিয়েছে। পরবর্তীকালে কুরআনের হরফ, মাখরাজ, সিফাত ও উচ্চারণের নিয়মগুলো বিস্তারিতভাবে তাজবিদশাস্ত্রে বিন্যস্ত হয়েছে। অর্থাৎ তাজবিদের মূলনীতি কুরআনের নির্দেশনার সঙ্গেই সম্পর্কিত।</p>
+  </div>
+</section>
+
+<section class="ch">
+  <div class="no"><span>২</span></div>
+  <h2>সুন্দর আওয়াজে কুরআন পড়া</h2>
+  <p class="sub">হাদিসের নির্দেশনা</p>
+  <div class="card tilt">
+    <div class="who">আবূ হুরায়রা (রাঃ) থেকে বর্ণিত:</div>
+    <p class="mean">রাসূলুল্লাহ (ﷺ) বলেছেন: যে লোক সুন্দর আওয়াজে কুরআন পড়ে না, সে আমাদের নয়। আবু হুরাইরা (রাঃ) ব্যতীত অন্যরা <span class="ar" style="font-size:22px">يَجْهَرُ بِهِ</span> ‘উচ্চস্বরে কুরআন পড়ে না’ কথাটুকু বৃদ্ধি করেছেন।</p>
+    <span class="ref">সহীহ বুখারী, হাদিস নং ৭৫২৭</span>
+  </div>
+</section>
+
+<section class="ch">
+  <div class="no"><span>৩</span></div>
+  <h2>কবিতার মতো তাড়াহুড়ো করে পড়া নয়</h2>
+  <p class="sub">সাহাবীদের শিক্ষা</p>
+  <div class="card tilt">
+    <div class="who">‘আবদুল্লাহ (রাঃ) থেকে বর্ণিত:</div>
+    <p class="mean">আবূ ওয়ায়িল (রহঃ) বলেন, আমরা একদিন সকালে ‘আবদুল্লাহ্‌ (রাঃ)-এর কাছে গেলাম। একজন লোক বলল, গতকাল রাতে আমি মুফাস্‌সাল সূরাসমূহ পাঠ করেছি। এ কথা শুনে ‘আবদুল্লাহ (রাঃ) বললেন, এত শীঘ্র পাঠ করা যেন কবিতা পাঠের মতো; অথচ আমরা নবী (ﷺ)-এর পাঠ শুনেছি এবং তা আমার ভালভাবে মনে আছে। নবী (ﷺ) থেকে যে সমস্ত সূরা পাঠ করতে আমি শুনেছি, তার সংখ্যা মুফাস্‌সাল হতে আঠারটি এবং ‘হা-মীম’ হতে দু’টি।</p>
+    <span class="ref">সহীহ বুখারী, হাদিস নং ৫০৪৩</span>
+  </div>
+</section>
+
+<section class="ch">
+  <div class="no"><span>৪</span></div>
+  <h2>সাহাবীদের কুরআন শেখার আগ্রহ</h2>
+  <p class="sub">ধৈর্য ও অধ্যবসায়ের দৃষ্টান্ত</p>
+  <div class="card tilt">
+    <div class="verse sm ar">وَحَدَّثَنِي عَنْ مَالِكٍ أَنَّهُ بَلَغَهُ أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ مَكَثَ عَلَى سُورَةِ الْبَقَرَةِ ثَمَانِيَ سِنِينَ يَتَعَلَّمُهَا</div>
+    <p class="mean"><b>বাংলা অর্থ:</b> ইমাম মালিক (রহ.)-এর কাছে এ সংবাদ পৌঁছেছে যে, আবদুল্লাহ ইবনু উমর (রা.) সূরা আল-বাকারা শেখার জন্য আট বছর অতিবাহিত করেছিলেন।</p>
+    <span class="ref">মুয়াত্তা ইমাম মালিক</span>
+  </div>
+  <div class="card tilt">
+    <div class="verse sm ar">تَعَلَّمَ عُمَرُ بْنُ الْخَطَّابِ رَضِيَ اللَّهُ عَنْهُ الْبَقَرَةَ فِي اثْنَتَيْ عَشْرَةَ سَنَةً، فَلَمَّا خَتَمَهَا نَحَرَ جَزُورًا.</div>
+    <div class="who">আবদুল্লাহ ইবনু উমর (রা.) থেকে বর্ণিত:</div>
+    <p class="mean"><b>বাংলা অর্থ:</b> উমর ইবনুল খাত্তাব (রা.) বারো বছর ধরে সূরা আল-বাকারা শিখেছিলেন। অতঃপর যখন তিনি তা সম্পন্ন করলেন, তখন একটি উট জবাই করলেন।</p>
+    <span class="ref">শু‘আবুল ঈমান, ইমাম বায়হাকি, হাদিস ১৮০৫</span><span class="badge">হাদিসটির মান দুর্বল</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="ar" style="font-size:24px;color:var(--green)">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <div>© Arabic Grammar Life Support (AGLS365)</div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById("pdf"),old=document.title;
+  b.addEventListener("click",function(){document.title="কুরআন-তেলাওয়াত-ও-আরবি-চর্চা-AGLS365";window.print()});
+  window.addEventListener("afterprint",function(){document.title=old});
+  var p=document.getElementById("prog");
+  function s(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;p.style.width=(m>0?h.scrollTop/m*100:0)+"%"}
+  addEventListener("scroll",s,{passive:true});s();
+  document.querySelectorAll(".tilt").forEach(function(c){
+    c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(900px) rotateY("+x*3+"deg) rotateX("+(-y*3)+"deg)"});
+    c.addEventListener("pointerleave",function(){c.style.transform=""});
+  });
+})();
+</script>
+</body>
+</html>
